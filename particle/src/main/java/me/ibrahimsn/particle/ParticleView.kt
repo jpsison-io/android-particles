@@ -11,6 +11,7 @@ import kotlin.math.min
 import kotlin.math.sqrt
 import kotlin.random.Random
 
+
 class ParticleView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet,
@@ -237,7 +238,7 @@ class ParticleView @JvmOverloads constructor(
 
                     synchronized (holder) {
                         // Clear screen every frame
-                        canvas?.drawColor(particlesBackgroundColor, PorterDuff.Mode.CLEAR)
+                        canvas?.drawColor(particlesBackgroundColor)
 
                         for (i in 0 until particleCount) {
                             particles[i].x += particles[i].vx
